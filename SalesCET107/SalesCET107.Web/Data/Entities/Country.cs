@@ -1,0 +1,15 @@
+﻿using Microsoft.AspNetCore.Cors;
+using System.ComponentModel.DataAnnotations;
+
+namespace SalesCET107.Web.Data.Entities
+{
+    public class Country
+    {
+        public int Id { get; set; }
+
+        [Display(Name = "País")]
+        [MaxLength(50, ErrorMessage = "O campo {0} deve ter no máximo {1} caracteres!")]
+        [Required(ErrorMessage = "O Campo {0} é obrigatório!")]
+        public string? Name { get; set; }
+    }
+}
